@@ -1,0 +1,57 @@
+DIV.BODY {
+    border: grey 1px solid;
+    width: 8.5in;
+    height: 11in;
+}
+DIV.title {
+    position: relative;
+    border: black 1px solid;
+    padding: .125in;
+    text-align: center;
+    margin-bottom: .25in;
+    float: none;
+    clear: both;
+}
+DIV.document-stats {
+	margin-left: 1in;
+}
+DIV.chapter-stats {
+	margin-left: 1in;
+}
+DIV.topic-stats {
+	margin-left: 1in;
+}
+DIV.footnote {
+    float: bottom;
+    margin-top: .5in;
+    font-size: 8pt;
+    font-style: italic;
+}
+TR.section-title {
+    padding-top: .25in;
+}
+H1 {
+    color: blue;
+    margin-left: 20px;
+}
+H2 {
+    color: navy;
+    margin-left: 30px;
+}
+H3 {
+    color: navy;
+    margin-left: 5px;
+}
+H4 {
+    color: navy;
+    margin-left: 5px;
+}
+H5 {
+    color: navy;
+    margin-left: 5px;
+}
+H6 {
+    color: navy;
+    margin-left: 5px;
+}
+	
