@@ -1,0 +1,9 @@
+<!ENTITY % supportedproducts-d-attribute 
+  "supportedproducts 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY supportedproducts-d-att
+   "a(props  supportedproducts)"
+>

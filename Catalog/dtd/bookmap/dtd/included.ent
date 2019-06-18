@@ -1,0 +1,9 @@
+<!ENTITY % included-d-attribute 
+  "included 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY included-d-att
+   "a(props  included)"
+>

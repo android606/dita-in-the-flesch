@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a fake catalog that we use when we want saxon to ignore the DTD -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+    <!-- Topics -->
+    <public publicId="-//OASIS//DTD DITA Topic//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Concept//EN" uri="dummy.dtd"/>
+    <public publicId="-//OASIS//DTD DITA Task//EN" uri="dummy.dtd"/>
+
+    <!-- Maps -->
+    <public publicId="-//OASIS//DTD DITA Map//EN" uri="dummy.dtd"/>
+ 
+    <!-- Bookmaps -->
+    <public publicId="-//OASIS//DTD DITA BookMap//EN" uri="dummy.dtd"/>
+
+
+</catalog>

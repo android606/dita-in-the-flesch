@@ -1,0 +1,9 @@
+<!ENTITY % itemtype-d-attribute 
+  "itemtype 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY itemtype-d-att
+   "a(props  itemtype)"
+>

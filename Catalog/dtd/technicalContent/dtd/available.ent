@@ -1,0 +1,9 @@
+<!ENTITY % available-d-attribute 
+  "available 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY available-d-att
+   "a(props  available)"
+>
