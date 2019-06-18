@@ -64,15 +64,15 @@ REM // Create HTML and then PDF
 
 ECHO - Step 1/3: Create Summary Report HTML
 COPY /Y "%XSLFOLDER%\fkstyle.css" "%OUTPUTFOLDER%"
-CALL ".\saxon\Transform.exe" -catalog:"%CATALOG%" -s:"%INPUTFOLDER%\%INPUTFILE%" -xsl:"%XSLFOLDER%\FKRA.xsl" -o:"%OUTPUTFOLDER%\FKScore.html" detail=2
+CALL "%STYLEROOT%\saxon\Transform.exe" -catalog:"%CATALOG%" -s:"%INPUTFOLDER%\%INPUTFILE%" -xsl:"%XSLFOLDER%\FKRA.xsl" -o:"%OUTPUTFOLDER%\FKScore.html" detail=2
 if %errorlevel% neq 0 goto exit_with_error
 
 ECHO - Step 2/3: Create Debug HTML (%OUTPUTFOLDER%\FKScore-debug.html)
-CALL ".\saxon\Transform.exe" -catalog:"%CATALOG%" -s:"%INPUTFOLDER%\%INPUTFILE%" -xsl:"%XSLFOLDER%\FKRA.xsl" -o:"%OUTPUTFOLDER%\FKScore-debug.html" detail=10
+CALL "%STYLEROOT%\saxon\Transform.exe" -catalog:"%CATALOG%" -s:"%INPUTFOLDER%\%INPUTFILE%" -xsl:"%XSLFOLDER%\FKRA.xsl" -o:"%OUTPUTFOLDER%\FKScore-debug.html" detail=10
 if %errorlevel% neq 0 goto exit_with_error
 
 ECHO - Step 3/3: Convert HTML to PDF
-CALL ".\wkhtmltox\bin\wkhtmltopdf.exe" --print-media-type --page-size Letter -O portrait --dpi 115 --header-line --header-left [date] --header-center "Flesch Kincaid Readability Assessment" --header-right "Page [page]/[toPage]" "%OUTPUTFOLDER%\FKScore.html" "%OUTPUTFOLDER%\FKScore%RANDOMID%.pdf"
+CALL "%STYLEROOT%\wkhtmltox\bin\wkhtmltopdf.exe" --print-media-type --page-size Letter -O portrait --dpi 115 --header-line --header-left [date] --header-center "Flesch Kincaid Readability Assessment" --header-right "Page [page]/[toPage]" "%OUTPUTFOLDER%\FKScore.html" "%OUTPUTFOLDER%\FKScore%RANDOMID%.pdf"
 
 
 
@@ -84,7 +84,7 @@ ECHO [END] %0
 echo FKRA Done
 echo .
 pause
-start explorer "%OUTPUTFOLDER%"
+echo Output files are in "%OUTPUTFOLDER%"
 exit /B 0
 
 
